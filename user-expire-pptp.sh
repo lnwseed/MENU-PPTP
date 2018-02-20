@@ -5,22 +5,22 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-echo "Connecting to VPS-murah.net..."
+echo "Connecting to เฮียเบิร์ด.com..."
 sleep 0.2
 echo "Checking Permision..."
 sleep 0.3
 CEK=`curl -s http://api.vps-murah.net/api/checker.php?mode=trial`;
-if [ "$CEK" != "MEMBER" ]; then
+if [ "$CEK" != "on" ]; then
 		echo -e "${red}Permission Denied!${NC}";
         echo $CEK;
         exit 0;
 else
-echo -e "${green}Permission Accepted...${NC}"
+echo -e "${green}ได้รับอนุญาตแล้ว...${NC}"
 sleep 1
 clear
 fi
-echo "echo "Script Created By VPS-Murah.net"" > /usr/local/bin/infouser-pptp
-echo "echo "Script Created By VPS-Murah.net"" > /usr/local/bin/expireduser-pptp
+echo "echo "Script Created By เฮียเบิร์ด.com"" > /usr/local/bin/infouser-pptp
+echo "echo "Script Created By เฮียเบิร์ด.com"" > /usr/local/bin/expireduser-pptp
 chmod +x /usr/local/bin/infouser-pptp
 chmod +x /usr/local/bin/expireduser
 chmod +x /etc/ppp/chap-secrets
@@ -41,10 +41,10 @@ for((i=1; i<=$totalaccounts; i++ ))
            timeto7days=$(( $todaystime + 604800 ))
                 if [ $userexpireinseconds -le $timeto7days ];
                 then                     
-                     echo "echo "VPS-Murah.net- User : $username Akan Segera Expired Pada tanggal : $tgl $bulantahun"" >> /usr/local/bin/infouser-pptp
+                     echo "echo "เฮียเบิร์ด.com- ไอดี : $username หมดอายุแล้ว : $tgl $bulantahun"" >> /usr/local/bin/infouser-pptp
                 fi
        else
-       echo "echo "VPS-Murah.net- User : $username Sudah Expired Pada Tanggal : $tgl $bulantahun"" >> /usr/local/bin/expireduser-pptp
+       echo "echo "เฮียเบิร์ด.com- ไอดี : $username หมดอายุในวันที่ : $tgl $bulantahun"" >> /usr/local/bin/expireduser-pptp
 	   sed -i $seeder /var/lib/premium-script/data-user-pptp
 	   sed -i $seeder /etc/ppp/chap-secrets
 	   sed -i "s|##|#|g" /etc/ppp/chap-secrets
@@ -81,10 +81,10 @@ for((i=1; i<=$totalaccounts; i++ ))
 	   sed -i "s|#################|#|g" /var/lib/premium-script/data-user-pptp
        fi
 done
-  echo "Script by vps-murah.net"
-  echo "Terimakasih sudah berlangganan di vps-murah.net"
+  echo "Script by เฮียเบิร์ด.com"
+  echo "Thank you for subscribing at เฮียเบิร์ด.com"
   echo " "
     echo "-----------------------------------------------"
-  echo -e "User VPN PPTP yang telah expired telah dikunci"
-  echo -e "Akses Login untuk username sudah dikunci"
+  echo -e "ผู้ใช้ PPTP VPN ที่หมดอายุถูกล็อก"
+  echo -e "การเข้าสู่ระบบสำหรับชื่อผู้ใช้ที่หมดอายุจะไม่สามารถใช้งานได้"
   echo "-----------------------------------------------"
