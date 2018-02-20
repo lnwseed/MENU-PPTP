@@ -5,17 +5,17 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-echo "Connecting to VPS-murah.net..."
+echo "Connecting to เฮียเบิร์ด.com..."
 sleep 0.2
 echo "Checking Permision..."
 sleep 0.3
-CEK=`curl -s http://api.vps-murah.net/api/checker.php?mode=trial`;
-if [ "$CEK" != "MEMBER" ]; then
+CEK=`curl -s http://xn--l3clxf6cwbe0gd7j.com/api/checker.php`;
+if [ "$CEK" != "on" ]; then
 		echo -e "${red}Permission Denied!${NC}";
         echo $CEK;
         exit 0;
 else
-echo -e "${green}Permission Accepted...${NC}"
+echo -e "${green}ได้รับอนุญาตแล้ว...${NC}"
 sleep 1
 clear
 fi
@@ -28,15 +28,15 @@ userpass=`cat /var/lib/premium-script/data-user-pptp | awk '{print $3}' | head -
 saat_expired=`cat /var/lib/premium-script/data-user-pptp | awk '{print $5}' | head -n $i | tail -n 1`
 tanggal_expired=$(date -u --date="1970-01-01 $saat_expired sec GMT" +%Y/%m/%d)
 tanggal_expired_display=$(date -u --date="1970-01-01 $saat_expired sec GMT" '+%d %B %Y')
-echo "VPS-Murah.net- User : $username dengan password ($userpass) Expire Pada Tanggal : $tanggal_expired_display" >> /tmp/alluser-pptp-data
+echo "เฮียเบิร์ด.com- ไอดี : $username รหัสผ่าน ($userpass) หมดอายุในวันที่ : $tanggal_expired_display" >> /tmp/alluser-pptp-data
 done
 clear
 echo "loading..."
 sleep 0.5
-  echo "Script by vps-murah.net"
-  echo "Terimakasih sudah berlangganan di vps-murah.net"
+  echo "Script by เฮียเบิร์ด.com"
+  echo "Thank you for subscribing at เฮียเบิร์ด.com"
   echo " "
-  echo "Daftar User VPN PPTP anda adalah:"
+  echo "รายชื่อผู้ใช้ PPTP VPN ทั้งหมด:"
   echo "-----------------------------------------------"
 cat /tmp/alluser-pptp-data
   echo "-----------------------------------------------"
