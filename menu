@@ -46,10 +46,9 @@ echo -e "-------------------------------------------------------" | lolcat
 	echo -e "-------------------------------------------------------" | lolcat
 	echo -e "|||||||||||||||||| เกี่ยวกับระบบ Server ||||||||||||||||||" | lolcat
 	echo -e "-------------------------------------------------------" | lolcat
-	echo -e " [+] |${color1}6${color3}| ${color3}ตั้งค่า Auto Reboot Server${color3}"
-	echo -e " [+] |${color1}7${color3}| ${color3}Reboot Server${color3}"
-	echo -e " [+] |${color1}8${color3}| ${color3}เปลี่ยน Password VPS${color3}"
-	echo -e " [+] |${color1}9${color3}| ${color3}ยกเลิก < ออกไม่เลือกเว้ย >${color3}"
+	echo -e " [+] |${color1}6${color3}| ${color3}Reboot Server${color3}"
+	echo -e " [+] |${color1}7${color3}| ${color3}เปลี่ยน Password VPS${color3}"
+	echo -e " [+] |${color1}8${color3}| ${color3}ยกเลิก < ออกไม่เลือกเว้ย >${color3}"
 
 echo -e "-------------------------------------------------------" | lolcat
 read -p " [>] เลือกคำสั่งที่ต้องการ (พิมพ์เลข): " x
@@ -65,12 +64,10 @@ user-login-pptp
 elif test $x -eq 5; then
 alluser-pptp
 elif test $x -eq 6; then
-auto-reboot
-elif test $x -eq 7; then
 reboot
-elif test $x -eq 8; then
+elif test $x -eq 7; then
 passwd
-elif test $x -eq 9; then
+elif test $x -eq 8; then
 echo ""
 echo " [>] ติดตามได้ที่ www.facebook.com/ceolnw"
 elif test $x -eq ""; then
