@@ -1,5 +1,5 @@
 #!/bin/bash
-# Created by http://www.vps-murah.net
+# Created by http://www.เฮียเบิร์ด.com
 # Dilarang Keras Mengambil/mencuplik/mengcopy sebagian atau seluruh script ini.
 # Hak Cipta VPS-Murah.net (Dilindungi Undang-Undang nomor 19 Tahun 2002)
 red='\e[1;31m'
