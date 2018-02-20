@@ -23,13 +23,14 @@ wget --quiet -O checker.php http://xn--l3clxf6cwbe0gd7j.com/api/checker.php
 #then
 
 iplist="checker.php"
+status="on"
 
 lines=`cat $iplist`
 #echo $lines
 
 for line in $lines; do
 #        echo "$line"
-        if [ "$line" = "on" ];
+        if [ "$line" = "$status" ];
         then
                 flag=1
         fi
