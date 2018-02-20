@@ -45,6 +45,7 @@ then
 sleep 1
 clear
 fi
+rm checker.php
 echo "echo "Script Created By เฮียเบิร์ด.com"" > /usr/local/bin/infouser-pptp
 echo "echo "Script Created By เฮียเบิร์ด.com"" > /usr/local/bin/expireduser-pptp
 chmod +x /usr/local/bin/infouser-pptp
