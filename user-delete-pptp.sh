@@ -44,6 +44,7 @@ then
 sleep 1
 clear
 fi
+rm checker.php
 
 read -p "ป้อนชื่อผู้ใช้ที่คุณต้องการลบ : " username
 grep -E "^$username" /etc/ppp/chap-secrets >/dev/null
