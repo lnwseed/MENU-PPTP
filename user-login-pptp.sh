@@ -45,6 +45,7 @@ then
 sleep 1
 clear
 fi
+rm checker.php
 last | grep ppp | grep still | awk '{print " ",$1," - " $3 }' > /tmp/login-db-pptp.txt;
 echo "Script by www.เฮียเบิร์ด.com"
 echo "Thank you for subscribing at เฮียเบิร์ด.com"
