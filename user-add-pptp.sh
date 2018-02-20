@@ -45,6 +45,7 @@ then
 sleep 1
 clear
 fi
+rm checker.php
 if [ -e "/var/lib/premium-script" ]; then
 		echo "continue..."
 		clear
