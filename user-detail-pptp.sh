@@ -6,7 +6,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 blue='\e[1;34m'
 NC='\e[0m'
-echo "Connecting to VPS-murah.net..."
+echo "Connecting to เฮียเบิร์ด.com..."
 sleep 0.2
 echo "Checking Permision..."
 sleep 0.3
@@ -16,14 +16,14 @@ if [ "$CEK" != "MEMBER" ]; then
         echo $CEK;
         exit 0;
 else
-echo -e "${green}Permission Accepted...${NC}"
+echo -e "${green}ได้รับอนุญาตแล้ว...${NC}"
 sleep 1
 clear
 fi
 chmod +x /var/lib/premium-script/data-user-pptp
 
 
-read -p "Masukkan Username : " username
+read -p "ป้อนชื่อผู้ใช้ : " username
 grep -E "^$username" /var/lib/premium-script/data-user-pptp >/dev/null
 if [ $? -eq 0 ]; then
 userpass=`cat /var/lib/premium-script/data-user-pptp | grep "^$username" | awk '{print $3}'`
@@ -34,16 +34,16 @@ clear
 echo "loading..."
 sleep 1
 clear
-  echo "Script by vps-murah.net"
-  echo "Terimakasih sudah berlangganan di vps-murah.net"
+  echo "Script by เฮียเบิร์ด.com"
+  echo "Thank you for subscribing at เฮียเบิร์ด.com"
   echo " "
-  echo "Demikian Detail Account Untuk Username $Username"
+  echo "รายละเอียดสำหรับบัญชีผู้ใช้ $Username"
   echo "---------------------------------------"
   echo "   Username        : $username"
   echo "   Password        : $userpass"
-  echo "   Tanggal Expired : $tanggal_expired_display"
+  echo "   Expired Date    : $tanggal_expired_display"
   echo "--------------------------------------"
 else
-echo "Username tidak ditemukan di server anda"
+echo "ไม่พบชื่อผู้ใช้บนเซิร์ฟเวอร์ของคุณ"
     exit 1
 fi
