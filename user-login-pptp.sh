@@ -10,7 +10,7 @@ sleep 0.2
 echo "Checking Permision..."
 sleep 0.3
 CEK=`curl -s http://api.vps-murah.net/api/checker.php?mode=trial`;
-if [ "$CEK" != "Harga Sewa Script: 20.000/IP VPS/Bulan. Fasilitas script ini gratis bagi pelanggan HostingTermurah.net Mau sewa script ini? PM Steven Indarto" ]; then
+if [ "$CEK" != "on" ]; then
 		echo -e "${red}Permission Denied!${NC}";
         echo $CEK;
         exit 0;
