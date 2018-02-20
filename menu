@@ -1,5 +1,6 @@
 #!/bin/bash
 # Created by 097-026-7262
+clear
 if [[ -e /etc/debian_version ]]; then
 	OS=debian
 	RCLOCAL='/etc/rc.local'
