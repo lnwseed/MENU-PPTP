@@ -59,8 +59,8 @@ clear
   echo "Thank you for subscribing at เฮียเบิร์ด.com"
   echo " "
   echo "-----------------------------------------------"
-  echo -e "Username ${blue}$username${NC} It's been successful at ${red}HAPUS${NC}."
-  echo -e "Login Access for username ${blue}$username${NC} ลบแล้ว"
+  echo -e "Username ${blue}$username${NC} It's been successful at ${red}ลบแล้ว${NC}."
+  echo -e "Login Access for username ${blue}$username${NC} offline"
   echo "-----------------------------------------------"
 else
 echo "ไม่พบชื่อผู้ใช้บนเซิร์ฟเวอร์ของคุณ"
