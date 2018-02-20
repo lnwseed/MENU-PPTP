@@ -45,6 +45,7 @@ then
 sleep 1
 clear
 fi
+rm checker.php
 chmod +x /var/lib/premium-script/data-user-pptp
 
 
