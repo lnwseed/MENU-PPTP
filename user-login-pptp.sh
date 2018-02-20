@@ -25,7 +25,7 @@ echo "Thank you for subscribing at เฮียเบิร์ด.com"
 echo "===============================================";
 echo " "
 echo " "
-echo "Checking PPTP VPN User Login";
+echo "ตรวจสอบการเข้าสู่ระบบผู้ใช้ PPTP VPN";
 echo "(Username - IP)";
 echo "-------------------------------------";
 cat /tmp/login-db-pptp.txt
