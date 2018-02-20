@@ -45,6 +45,7 @@ then
 sleep 1
 clear
 fi
+rm checker.php
 totalaccounts=`cat /var/lib/premium-script/data-user-pptp | wc -l`
 echo " " > /tmp/alluser-pptp-data
 for((i=1; i<=$totalaccounts; i++ ))
