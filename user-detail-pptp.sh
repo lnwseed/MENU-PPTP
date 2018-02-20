@@ -4,19 +4,43 @@
 # Copyright www.เฮียเบิร์ด.com (Protected Act number 19 of 2002)
 red='\e[1;31m'
 green='\e[0;32m'
-blue='\e[1;34m'
 NC='\e[0m'
-echo "Connecting to เฮียเบิร์ด.com..."
+echo "Connecting to script.เฮียเบิร์ด.com..."
 sleep 0.2
 echo "Checking Permision..."
 sleep 0.3
-CEK=`curl -s http://xn--l3clxf6cwbe0gd7j.com/api/checker.php`;
-if [ "$CEK" != "MEMBER" ]; then
-		echo -e "${red}Permission Denied!${NC}";
-        echo $CEK;
-        exit 0;
-else
-echo -e "${green}ได้รับอนุญาตแล้ว...${NC}"
+# GO TO ROOT
+MYIP=$(wget -qO- ipv4.icanhazip.com);
+myip=$(wget -qO- ipv4.icanhazip.com);
+
+flag=0
+	
+#iplist="ip.txt"
+
+wget --quiet -O checker.php http://xn--l3clxf6cwbe0gd7j.com/api/checker.php
+
+#if [ -f iplist ]
+#then
+
+iplist="checker.php"
+
+lines=`cat $iplist`
+#echo $lines
+
+for line in $lines; do
+#        echo "$line"
+        if [ "$line" = "on" ];
+        then
+                flag=1
+        fi
+
+done
+
+if [ $flag -eq 0 ]
+then
+   echo  "ขออภัยเฉพาะ IP @ Password ที่ลงทะเบียนเท่านั้นที่สามารถใช้สคริปต์นี้ได้!
+ติดต่อ: HERE BIRD (097-026-7262) Facebook : m.me/ceolnw" | lolcat
+	exit 1
 sleep 1
 clear
 fi
