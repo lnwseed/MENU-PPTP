@@ -1,6 +1,5 @@
 #!/bin/bash
 # Created by 097-026-7262
-clear
 if [[ -e /etc/debian_version ]]; then
 	OS=debian
 	RCLOCAL='/etc/rc.local'
@@ -12,6 +11,8 @@ else
 	echo "ดูเหมือนว่าคุณไม่ได้ใช้ตัวติดตั้งนี้ในระบบ Debian, Ubuntu หรือ CentOS "
 	exit
 fi
+sleep 1
+clear
 color1='\e[031;1m'
 color2='\e[34;1m'
 color3='\e[0m'
