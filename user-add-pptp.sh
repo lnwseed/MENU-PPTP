@@ -5,17 +5,17 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-echo "Connecting to VPS-murah.net..."
+echo "Connecting to เฮียเบิร์ด.com..."
 sleep 0.2
 echo "Checking Permision..."
 sleep 0.3
 CEK=`curl -s http://api.vps-murah.net/api/checker.php?mode=trial`;
-if [ "$CEK" != "MEMBER" ]; then
+if [ "$CEK" != "on" ]; then
 		echo -e "${red}Permission Denied!${NC}";
         echo $CEK;
         exit 0;
 else
-echo -e "${green}Permission Accepted...${NC}"
+echo -e "${green}ได้รับอนุญาตแล้ว...${NC}"
 sleep 1
 clear
 fi
@@ -25,14 +25,14 @@ if [ -e "/var/lib/premium-script" ]; then
 	else
 		mkdir /var/lib/premium-script;
 fi
-read -p "Masukkan Username : " username
+read -p "ป้อนชื่อผู้ใช้ : " username
 grep -E "^$username" /etc/ppp/chap-secrets >/dev/null
 if [ $? -eq 0 ]; then
-echo "Username sudah ada di VPS anda"
+echo "ชื่อผู้ใช้มีอยู่แล้วใน VPS ของคุณ"
 exit 0
 else
-read -p "Masukkan Password : " password
-read -p "Masukkan Lama Masa Aktif Account(Hari): " masa_aktif
+read -p "ใส่รหัสผ่าน : " password
+read -p "ป้อนระยะเวลาบัญชี (วัน): " masa_aktif
 
 today=`date +%s`
 masa_aktif_detik=$(( $masa_aktif * 86400 ))
@@ -40,7 +40,7 @@ saat_expired=$(($today + $masa_aktif_detik))
 tanggal_expired=$(date -u --date="1970-01-01 $saat_expired sec GMT" +%Y/%m/%d)
 tanggal_expired_display=$(date -u --date="1970-01-01 $saat_expired sec GMT" '+%d %B %Y')
 clear
-echo "Connecting to VPS-murah.net..."
+echo "Connecting to เฮียเบิร์ด.com..."
 sleep 0.5
 echo "Creating Account..."
 sleep 0.2
@@ -54,15 +54,15 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 echo "$username	*	$password	*" >> /etc/ppp/chap-secrets
 echo "$username *   $password   *  $saat_expired"  >> /var/lib/premium-script/data-user-pptp
   clear
-  echo "Script by vps-murah.net"
-  echo "Terimakasih sudah berlangganan di vps-murah.net"
+  echo "Script by เฮียเบิร์ด.com"
+  echo "Thank you for subscribing at เฮียเบิร์ด.com"
   echo " "
-  echo "Demikian Detail Account Yang Telah Dibuat"
+  echo "สร้างบัญชีผู้ใช้เรียบร้อยแล้ว"
   echo "---------------------------------------"
   echo "   Host            : $MYIP"
   echo "   Username        : $username"
   echo "   Password        : $password"
-  echo "   Tanggal Expired : $tanggal_expired_display"
+  echo "   Expired Date    : $tanggal_expired_display"
   echo "--------------------------------------"
   echo " "
 fi
