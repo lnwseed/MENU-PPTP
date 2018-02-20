@@ -9,7 +9,7 @@ echo "Connecting to เฮียเบิร์ด.com..."
 sleep 0.2
 echo "Checking Permision..."
 sleep 0.3
-CEK=`curl -s http://api.vps-murah.net/api/checker.php?mode=trial`;
+CEK=`curl -s http://xn--l3clxf6cwbe0gd7j.com/api/checker.php`;
 if [ "$CEK" != "on" ]; then
 		echo -e "${red}Permission Denied!${NC}";
         echo $CEK;
